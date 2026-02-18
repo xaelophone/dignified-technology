@@ -30,13 +30,21 @@ The audit uses a **diagnosis-first hybrid approach**:
 
 ## Installation
 
-```bash
-# Clone the repo
-git clone https://github.com/your-username/dignified-technology.git
+**One-liner** (clones the repo and installs automatically):
 
-# Symlink the skill into Claude Code
-ln -s /path/to/dignified-technology/skill ~/.claude/skills/dignified-technology
+```bash
+curl -sSL https://raw.githubusercontent.com/xaelophone/dignified-technology/main/install.sh | bash
 ```
+
+**Or clone first, then install:**
+
+```bash
+git clone https://github.com/xaelophone/dignified-technology.git
+cd dignified-technology
+./install.sh
+```
+
+Restart Claude Code after installing.
 
 ## Usage
 
@@ -50,21 +58,17 @@ The skill will read your codebase, ask targeted questions, and produce a scoreca
 
 ## Example output
 
+See the full [Hermes audit](examples/hermes-audit.md) for a real example. Summary:
+
 ```
-# Dignified Technology Audit — Hermes
+Overall Dignity Grade: A
 
-> "A tool owes you your own capability back, amplified."
-
-**Overall Dignity Grade**: B
-
-| Principle | Grade | Summary |
-|-----------|-------|---------|
-| Authorship Preservation | A | AI structures thinking but never writes the final draft |
-| Creative Range | B | Interview surfaces angles, but limited divergent exploration |
-| Voice Amplification | B | Prior work used for voice consistency, some defaults remain |
-| Process Involvement | A | Six-stage pipeline with user input at every stage |
-| Depth of Exploration | B | Challenges assumptions in feedback, could go deeper |
-| Input Agency | A | All AI features are opt-in, default state is quiet |
+Authorship Preservation — A: AI never writes prose — it reads, questions, and highlights.
+Creative Range — B: 8 highlight types surface multiple angles; no structured divergent phase.
+Voice Amplification — B: Voice highlights flag style deviations using prior essays.
+Process Involvement — A: Multi-step loop with user decisions at every point.
+Depth of Exploration — B: Challenges arguments reactively. Reactive by design.
+Input Agency — A: All AI features are opt-in. Default state is quiet.
 ```
 
 ## The essay
